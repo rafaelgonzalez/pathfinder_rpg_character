@@ -2,7 +2,7 @@ class Character
   module Skill
     class Base
       attr_accessor :rank
-      attr_reader :ability, :character, :klasses, :label
+      attr_reader :ability, :character, :trained_klasses, :label
 
       def initialize(character)
         @character = character
@@ -10,7 +10,7 @@ class Character
         @rank = 0
         @ability = configuration['ability']
 
-        set_klasses(configuration['classes'])
+        set_trained_klasses(configuration['classes'])
       end
 
       def label
@@ -21,8 +21,12 @@ class Character
         character.public_send("#{ability}_modifier")
       end
 
-      def klass_skill?(klass)
-        false
+      def klass_skill?
+        @character.klasses.any?{|klass| klasses.include? klass }
+      end
+
+      def skill_for_klass?(klass)
+
       end
 
       def klass_modifier
@@ -35,8 +39,12 @@ class Character
 
       private
 
-      def set_classes(klasses)
-        klasses = klasses
+      def set_trained_klasses(klasses_names)
+        @trained_klasses = []
+
+        klasses_names.each do |klass_name|
+          @trained_klasses.push "Character::Klass::#{klass_name.camelize}".constantize
+        end
       end
     end
   end
