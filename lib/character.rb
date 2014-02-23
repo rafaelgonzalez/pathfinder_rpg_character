@@ -2,6 +2,7 @@ require 'lib/character/ability_scores'
 require 'lib/character/armor_class'
 require 'lib/character/races'
 require 'lib/character/saving_throws'
+require 'lib/character/skills'
 
 class Character
   include Character::AbilityScores
@@ -10,6 +11,7 @@ class Character
 
   def initialize
     extend Character::Race::Empty
+    extend Character::Skills
 
     @armor_class = ArmorClass.new(self)
     @saving_throws = SavingThrows.new(self)

@@ -1,0 +1,369 @@
+skills:
+  acrobatics:
+    ability: dexterity
+    untrained: true
+    armor_penalty: true
+    classes:
+      - barbarian
+      - bard
+      - monk
+      - rogue
+
+  appraise:
+    ability: intelligence
+    untrained: true
+    armor_penalty: false
+    classes:
+      - bard
+      - cleric
+      - rogue
+      - sorcerer
+      - wizard
+
+  bluff:
+    ability: charisma
+    untrained: true
+    armor_penalty: false
+    classes:
+      - bard
+      - rogue
+      - sorcerer
+
+  climb:
+    ability: strength
+    untrained: true
+    armor_penalty: true
+    classes:
+      - barbarian
+      - bard
+      - druid
+      - fighter
+      - monk
+      - ranger
+      - rogue
+
+  craft:
+    ability: intelligence
+    untrained: true
+    armor_penalty: false
+    classes:
+      - barbarian
+      - bard
+      - cleric
+      - druid
+      - fighter
+      - monk
+      - paladin
+      - ranger
+      - rogue
+      - sorcerer
+      - wizard
+
+  diplomacy:
+    ability: charisma
+    untrained: true
+    armor_penalty: false
+    classes:
+      - bard
+      - cleric
+      - paladin
+      - rogue
+
+  disable_device:
+    ability: dexterity
+    untrained: false
+    armor_penalty: true
+    classes:
+      - rogue
+
+  disguise:
+    ability: charisma
+    untrained: true
+    armor_penalty: false
+    classes:
+      - bard
+      - rogue
+
+  escape_artist:
+    ability: dexterity
+    untrained: true
+    armor_penalty: true
+    classes:
+      - bard
+      - monk
+      - rogue
+
+  fly:
+    ability: dexterity
+    untrained: true
+    armor_penalty: true
+    classes:
+      - druid
+      - sorcerer
+      - wizard
+
+  handle_animal:
+    ability: charisma
+    untrained: false
+    armor_penalty: false
+    classes:
+      - barbarian
+      - druid
+      - fighter
+      - paladin
+      - ranger
+
+  heal:
+    ability: wisdom
+    untrained: true
+    armor_penalty: false
+    classes:
+      - cleric
+      - druid
+      - paladin
+      - ranger
+
+  intimidate:
+    ability: charisma
+    untrained: true
+    armor_penalty: false
+    classes:
+      - barbarian
+      - bard
+      - fighter
+      - monk
+      - ranger
+      - rogue
+      - sorcerer
+
+  knowledge_arcana:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - cleric
+      - sorcerer
+      - wizard
+
+  knowledge_dungeoneering:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - fighter
+      - ranger
+      - rogue
+      - wizard
+
+  knowledge_engineering:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - fighter
+      - wizard
+
+  knowledge_geography:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - druid
+      - ranger
+      - wizard
+
+  knowledge_history:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - cleric
+      - monk
+      - wizard
+
+  knowledge_local:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - rogue
+      - wizard
+
+  knowledge_nature:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - barbarian
+      - bard
+      - druid
+      - ranger
+      - wizard
+
+  knowledge_nobility:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - cleric
+      - paladin
+      - wizard
+
+  knowledge_planes:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - cleric
+      - wizard
+
+  knowledge_religion:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - cleric
+      - monk
+      - paladin
+      - wizard
+
+  linguistics:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - cleric
+      - rogue
+      - wizard
+
+  perception:
+    ability: wisdom
+    untrained: true
+    armor_penalty: false
+    classes:
+      - barbarian
+      - bard
+      - druid
+      - monk
+      - ranger
+      - rogue
+
+  perform:
+    ability: charisma
+    untrained: true
+    armor_penalty: false
+    classes:
+      - bard
+      - monk
+      - rogue
+
+  profession:
+    ability: wisdom
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - cleric
+      - druid
+      - fighter
+      - monk
+      - paladin
+      - ranger
+      - rogue
+      - sorcerer
+      - wizard
+
+  ride:
+    ability: dexterity
+    untrained: true
+    armor_penalty: true
+    classes:
+      - barbarian
+      - druid
+      - fighter
+      - monk
+      - paladin
+      - ranger
+
+  sense_motive:
+    ability: wisdom
+    untrained: true
+    armor_penalty: false
+    classes:
+      - bard
+      - cleric
+      - monk
+      - paladin
+      - rogue
+
+  sleight_of_hand:
+    ability: dexterity
+    untrained: false
+    armor_penalty: true
+    classes:
+      - bard
+      - rogue
+
+  spellcraft:
+    ability: intelligence
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - cleric
+      - druid
+      - paladin
+      - ranger
+      - sorcerer
+      - wizard
+
+  stealth:
+    ability: dexterity
+    untrained: true
+    armor_penalty: true
+    classes:
+      - bard
+      - monk
+      - ranger
+      - rogue
+
+  survival:
+    ability: wisdom
+    untrained: true
+    armor_penalty: false
+    classes:
+      - barbarian
+      - druid
+      - fighter
+      - ranger
+
+  swim:
+    ability: wisdom
+    untrained: true
+    armor_penalty: true
+    classes:
+      - barbarian
+      - druid
+      - fighter
+      - monk
+      - ranger
+      - rogue
+
+  use_magic_device:
+    ability: charisma
+    untrained: false
+    armor_penalty: false
+    classes:
+      - bard
+      - rogue
+      - sorcerer
