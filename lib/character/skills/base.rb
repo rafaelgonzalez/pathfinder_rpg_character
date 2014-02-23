@@ -2,7 +2,7 @@ class Character
   module Skill
     class Base
       attr_accessor :rank
-      attr_reader :ability, :character, :classes, :label
+      attr_reader :ability, :character, :klasses, :label
 
       def initialize(character)
         @character = character
@@ -10,7 +10,7 @@ class Character
         @rank = 0
         @ability = configuration['ability']
 
-        set_classes(configuration['classes'])
+        set_klasses(configuration['classes'])
       end
 
       def label
@@ -21,22 +21,22 @@ class Character
         character.public_send("#{ability}_modifier")
       end
 
-      def class_skill?
+      def klass_skill?(klass)
         false
       end
 
-      def class_modifier
-        (class_skill? and rank > 0) ? 3 : 0
+      def klass_modifier
+        (klass_skill? and rank > 0) ? 3 : 0
       end
 
       def total
-        ability_modifier + rank + class_modifier
+        ability_modifier + rank + klass_modifier
       end
 
       private
 
-      def set_classes(classes)
-        @classes = classes
+      def set_classes(klasses)
+        klasses = klasses
       end
     end
   end
