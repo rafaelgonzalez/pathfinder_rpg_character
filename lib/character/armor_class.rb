@@ -20,15 +20,15 @@ class Character
     end
 
     def size_modifier
-      0
+      @charcter.size.modifier
     end
 
     def other_modifiers
-
+      0
     end
 
     def touch
-      BASE_ARMOR_CLASS + dexterity_modifier + other_modifiers
+      BASE_ARMOR_CLASS + @character.dexterity_modifier + other_modifiers
     end
 
     def flat_footed
@@ -36,7 +36,7 @@ class Character
     end
 
     def total
-      BASE_ARMOR_CLASS + armor_bonus + shield_bonus + dexterity_modifier + other_modifiers
+      BASE_ARMOR_CLASS + armor_bonus + shield_bonus + @character.dexterity_modifier + other_modifiers
     end
   end
 end
