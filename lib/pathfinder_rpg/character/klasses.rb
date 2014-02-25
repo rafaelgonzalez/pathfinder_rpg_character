@@ -1,4 +1,4 @@
-require 'lib/character/klasses/base'
+require 'pathfinder_rpg/character/klasses/base'
 
 class Character
   module Klasses

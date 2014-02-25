@@ -1,10 +1,10 @@
-require 'lib/character/ability_scores'
-require 'lib/character/armor_class'
-require 'lib/character/attack'
-require 'lib/character/klasses'
-require 'lib/character/races'
-require 'lib/character/saving_throws'
-require 'lib/character/skills'
+require 'pathfinder_rpg/character/ability_scores'
+require 'pathfinder_rpg/character/armor_class'
+require 'pathfinder_rpg/character/attack'
+require 'pathfinder_rpg/character/klasses'
+require 'pathfinder_rpg/character/races'
+require 'pathfinder_rpg/character/saving_throws'
+require 'pathfinder_rpg/character/skills'
 
 class Character
   include Character::AbilityScores

@@ -1,13 +1,13 @@
-require 'lib/character/sizes'
+require 'pathfinder_rpg/character/sizes'
 
-require 'lib/character/races/dwarf'
-require 'lib/character/races/elf'
-require 'lib/character/races/empty'
-require 'lib/character/races/gnome'
-require 'lib/character/races/half_elf'
-require 'lib/character/races/half_orc'
-require 'lib/character/races/halfling'
-require 'lib/character/races/human'
+require 'pathfinder_rpg/character/races/dwarf'
+require 'pathfinder_rpg/character/races/elf'
+require 'pathfinder_rpg/character/races/empty'
+require 'pathfinder_rpg/character/races/gnome'
+require 'pathfinder_rpg/character/races/half_elf'
+require 'pathfinder_rpg/character/races/half_orc'
+require 'pathfinder_rpg/character/races/halfling'
+require 'pathfinder_rpg/character/races/human'
 
 class Character
   module Races

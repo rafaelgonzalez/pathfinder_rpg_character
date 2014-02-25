@@ -1,3 +1,3 @@
-require 'lib/character/sizes/empty'
-require 'lib/character/sizes/medium'
-require 'lib/character/sizes/small'
+require 'pathfinder_rpg/character/sizes/empty'
+require 'pathfinder_rpg/character/sizes/medium'
+require 'pathfinder_rpg/character/sizes/small'

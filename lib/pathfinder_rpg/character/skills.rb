@@ -1,4 +1,4 @@
-require 'lib/character/skills/base'
+require 'pathfinder_rpg/character/skills/base'
 
 class Character
   module Skills
