@@ -1,24 +1,24 @@
-class Character
+class PathfinderRpg::Character
   module Size
-    module Empty
+    module Small
       def size
-        Character::Size::Empty
+        PathfinderRpg::Character::Size::Small
       end
 
-      def self.name
-        nil
+      def self.label
+        'small'
       end
 
       def self.letter
-        nil
+        'S'
       end
 
       def self.modifier
-        0
+        1
       end
 
       def self.special_modifier
-        0
+        -1
       end
     end
   end

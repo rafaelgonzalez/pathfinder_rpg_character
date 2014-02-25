@@ -1,6 +1,6 @@
-require 'lib/character/klasses/base'
+require 'pathfinder_rpg/character/klasses/base'
 
-class Character
+class PathfinderRpg::Character
   module Klasses
     CLASSES_CONFIG_FILE = 'config/classes.yml'
 
@@ -46,14 +46,14 @@ class Character
       klasses_config = YAML.load_file(CLASSES_CONFIG_FILE)['classes']
 
       klasses_config.keys.each do |klass_name|
-        unless Character::Klass.const_defined? klass_name.camelize
+        unless PathfinderRpg::Character::Klass.const_defined? klass_name.camelize
           create_klass_class(klass_name.camelize, klasses_config[klass_name])
         end
       end
     end
 
     def create_klass_class(klass_name, klass_config)
-      klass = Character::Klass.const_set(klass_name, Class.new(Klass::Base))
+      klass = PathfinderRpg::Character::Klass.const_set(klass_name, Class.new(Klass::Base))
       klass.const_set('KLASS_CONFIG', klass_config)
       klass.send(:define_method, :configuration) { klass::KLASS_CONFIG }
     end
@@ -73,7 +73,7 @@ class Character
     end
 
     def full_class_name(klass_name)
-      "Character::Klass::#{klass_name}"
+      "PathfinderRpg::Character::Klass::#{klass_name}"
     end
   end
 end

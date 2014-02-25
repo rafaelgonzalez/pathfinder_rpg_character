@@ -1,4 +1,4 @@
-class Character
+class PathfinderRpg::Character
   class SavingThrows
     def initialize(character)
       @character = character

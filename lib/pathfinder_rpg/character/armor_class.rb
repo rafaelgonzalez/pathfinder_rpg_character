@@ -1,4 +1,4 @@
-class Character
+class PathfinderRpg::Character
   class ArmorClass
 
     BASE_ARMOR_CLASS = 10

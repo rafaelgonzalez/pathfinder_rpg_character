@@ -1,4 +1,4 @@
-class Character
+class PathfinderRpg::Character
   module Klass
     class Base
       attr_accessor :level
