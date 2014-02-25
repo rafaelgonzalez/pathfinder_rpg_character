@@ -26,8 +26,13 @@ class Character
         configuration['skill_ranks_per_level'] + @character.intelligence_modifier
       end
 
-      def base_attack_bonus
-        level_configuration_for('base_attack_bonus')
+      def base_attack_bonus(attack_number = 1)
+        raise ArgumentError.new('Not a valid attack number') unless attack_number > 0
+        level_configuration_for('base_attack_bonus').at(attack_number - 1) || 0
+      end
+
+      def available_attacks
+        level_configuration_for('base_attack_bonus').size
       end
 
       def fortitude_save_base
