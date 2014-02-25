@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Pathfinder character generator gem'
   s.authors     = ['Rafaël Gonzalez']
   s.email       = 'rafaelgonzalez@users.noreply.github.com'
-  s.files       = ['pathfinder_rpg_character.rb']
+  s.files       = ['lib/pathfinder_rpg.rb']
   s.homepage    = 'http://rubygems.org/gems/pathfinder_rpg_character'
   s.license     = 'Open game license'
 
