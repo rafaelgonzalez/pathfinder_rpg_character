@@ -1,5 +1,9 @@
 source "https://rubygems.org"
 
+gemspec
+
 gem 'activesupport'
 
-gem 'pry'
+group :development do
+  gem 'pry'
+end
