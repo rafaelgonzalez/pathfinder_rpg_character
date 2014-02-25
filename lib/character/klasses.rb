@@ -24,7 +24,7 @@ class Character
     end
 
     def level
-      klasses.map(&:level).inject(:+) || 0
+      klasses.map(&:level).sum || 0
     end
 
     def attacks_per_turn
