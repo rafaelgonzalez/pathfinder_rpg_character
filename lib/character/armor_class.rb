@@ -15,28 +15,43 @@ class Character
       0
     end
 
-    def deflection
+    def natural_bonus
       0
     end
 
-    def size_modifier
-      @charcter.size.modifier
+    def size_bonus
+      @character.race.size.modifier
     end
 
-    def other_modifiers
+    def deflection_bonus
+      0
+    end
+
+    def dexterity_bonus
+      @character.dexterity_modifier
+    end
+
+    def dodge_bonus
       0
     end
 
     def touch
-      BASE_ARMOR_CLASS + @character.dexterity_modifier + other_modifiers
+      total - armor_bonus - shield_bonus - natural_bonus
     end
 
     def flat_footed
-      BASE_ARMOR_CLASS + armor_bonus + shield_bonus + other_modifiers
+      total - dexterity_bonus - dodge_bonus
     end
 
     def total
-      BASE_ARMOR_CLASS + armor_bonus + shield_bonus + @character.dexterity_modifier + other_modifiers
+      BASE_ARMOR_CLASS +
+      armor_bonus +
+      shield_bonus +
+      natural_bonus +
+      size_bonus +
+      deflection_bonus +
+      dexterity_bonus +
+      dodge_bonus
     end
   end
 end
