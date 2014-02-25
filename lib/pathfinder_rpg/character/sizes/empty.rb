@@ -1,8 +1,8 @@
-class Character
+class PathfinderRpg::Character
   module Size
     module Empty
       def size
-        Character::Size::Empty
+        PathfinderRpg::Character::Size::Empty
       end
 
       def self.name

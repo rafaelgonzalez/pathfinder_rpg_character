@@ -1,4 +1,4 @@
-class Character
+class PathfinderRpg::Character
   module Skill
     class Base
       attr_accessor :rank
@@ -43,7 +43,7 @@ class Character
         @trained_klasses = []
 
         klasses_names.each do |klass_name|
-          @trained_klasses.push "Character::Klass::#{klass_name.camelize}".constantize
+          @trained_klasses.push "PathfinderRpg::Character::Klass::#{klass_name.camelize}".constantize
         end
       end
     end

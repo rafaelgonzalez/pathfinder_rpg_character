@@ -1,10 +1,10 @@
-class Character
+class PathfinderRpg::Character
   module Race
     module Halfling
-      extend Character::Size::Small
+      extend PathfinderRpg::Character::Size::Small
 
       def race
-        Character::Race::Halfling
+        PathfinderRpg::Character::Race::Halfling
       end
     end
   end

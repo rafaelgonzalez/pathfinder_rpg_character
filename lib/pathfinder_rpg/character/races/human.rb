@@ -1,10 +1,10 @@
-class Character
+class PathfinderRpg::Character
   module Race
     module Human
-      extend Character::Size::Small
+      extend PathfinderRpg::Character::Size::Small
 
       def race
-        Character::Race::Human
+        PathfinderRpg::Character::Race::Human
       end
     end
   end

@@ -1,8 +1,8 @@
-class Character
+class PathfinderRpg::Character
   module Size
     module Medium
       def size
-        Character::Size::Medium
+        PathfinderRpg::Character::Size::Medium
       end
 
       def self.label

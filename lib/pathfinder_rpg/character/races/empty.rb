@@ -1,10 +1,10 @@
-class Character
+class PathfinderRpg::Character
   module Race
     module Empty
-      extend Character::Size::Empty
+      extend PathfinderRpg::Character::Size::Empty
 
       def race
-        Character::Race::Empty
+        PathfinderRpg::Character::Race::Empty
       end
     end
   end

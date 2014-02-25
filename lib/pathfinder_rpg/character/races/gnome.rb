@@ -1,10 +1,10 @@
-class Character
+class PathfinderRpg::Character
   module Race
     module Gnome
-      extend Character::Size::Small
+      extend PathfinderRpg::Character::Size::Small
 
       def race
-        Character::Race::Gnome
+        PathfinderRpg::Character::Race::Gnome
       end
     end
   end

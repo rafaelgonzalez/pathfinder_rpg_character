@@ -1,10 +1,10 @@
-class Character
+class PathfinderRpg::Character
   module Race
     module HalfElf
-      extend Character::Size::Medium
+      extend PathfinderRpg::Character::Size::Medium
 
       def race
-        Character::Race::HalfElf
+        PathfinderRpg::Character::Race::HalfElf
       end
     end
   end

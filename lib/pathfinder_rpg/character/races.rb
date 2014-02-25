@@ -9,13 +9,13 @@ require 'pathfinder_rpg/character/races/half_orc'
 require 'pathfinder_rpg/character/races/halfling'
 require 'pathfinder_rpg/character/races/human'
 
-class Character
+class PathfinderRpg::Character
   module Races
     include Race
 
     def self.extended(character)
       character.instance_exec do
-        extend Character::Race::Empty
+        extend PathfinderRpg::Character::Race::Empty
       end
     end
 
@@ -34,7 +34,7 @@ class Character
         raise ArgumentError.new("Wrong race name, choose one of the following: #{available_races}")
       end
 
-      extend "Character::Race::#{race_class_name}".constantize
+      extend "PathfinderRpg::Character::Race::#{race_class_name}".constantize
     end
   end
 end

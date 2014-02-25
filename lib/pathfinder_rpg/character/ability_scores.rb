@@ -1,4 +1,4 @@
-class Character
+class PathfinderRpg::Character
   module AbilityScores
     # @!attribute charisma
     #   @return [Fixnum] the character's charisma.
