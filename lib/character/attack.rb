@@ -18,7 +18,7 @@ class Character
     def base_attack_bonus(attack_number = 1)
       @character.klasses.map do |klass|
         klass.base_attack_bonus(attack_number)
-      end.inject(:+)
+      end.sum
     end
 
     # Returns the melee bonus for a given attack.
