@@ -1,5 +1,22 @@
 class Character
   module AbilityScores
+    # @!attribute charisma
+    #   @return [Fixnum] the character's charisma.
+    #
+    # @!attribute constitution
+    #   @return [Fixnum] the character's constitution.
+    #
+    # @!attribute dexterity
+    #   @return [Fixnum] the character's dexterity.
+    #
+    # @!attribute intelligence
+    #   @return [Fixnum] the character's intelligence.
+    #
+    # @!attribute strength
+    #   @return [Fixnum] the character's strength.
+    #
+    # @!attribute wisdom
+    #   @return [Fixnum] the character's wisdom.
 
     MODIFIER_MAP = {
       -Float::INFINITY..1 => -5,
@@ -27,30 +44,36 @@ class Character
       44..Float::INFINITY => 17,
     }
 
-    attr_accessor :strength, :intelligence, :wisdom, :dexterity, :constitution, :charisma
+    attr_accessor :charisma, :constitution, :dexterity, :intelligence, :strength, :wisdom
 
-    def strength_modifier
-      get_modifier_from_value(strength)
+    # @return [Fixnum] the charisma modifier.
+    def charisma_modifier
+      get_modifier_from_value(charisma)
     end
 
-    def intelligence_modifier
-      get_modifier_from_value(intelligence)
-    end
-
-    def wisdom_modifier
-      get_modifier_from_value(wisdom)
-    end
-
-    def dexterity_modifier
-      get_modifier_from_value(dexterity)
-    end
-
+    # @return [Fixnum] the constitution modifier.
     def constitution_modifier
       get_modifier_from_value(constitution)
     end
 
-    def charisma_modifier
-      get_modifier_from_value(charisma)
+    # @return [Fixnum] the dexterity modifier.
+    def dexterity_modifier
+      get_modifier_from_value(dexterity)
+    end
+
+    # @return [Fixnum] the intelligence modifier.
+    def intelligence_modifier
+      get_modifier_from_value(intelligence)
+    end
+
+    # @return [Fixnum] the strength modifier.
+    def strength_modifier
+      get_modifier_from_value(strength)
+    end
+
+    # @return [Fixnum] the wisdom modifier.
+    def wisdom_modifier
+      get_modifier_from_value(wisdom)
     end
 
     private
