@@ -6,6 +6,18 @@ class PathfinderRpg::Character
       def race
         PathfinderRpg::Character::Race::Elf
       end
+
+      def constitution
+        super - 2
+      end
+
+      def dexterity
+        super + 2
+      end
+
+      def intelligence
+        super + 2
+      end
     end
   end
 end

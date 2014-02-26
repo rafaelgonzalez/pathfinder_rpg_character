@@ -16,6 +16,13 @@ class PathfinderRpg::Character
     extend PathfinderRpg::Character::Klasses
     extend PathfinderRpg::Character::Skills
 
+    @charisma = 0
+    @constitution = 0
+    @dexterity = 0
+    @intelligence = 0
+    @strength = 0
+    @wisdom = 0
+
     @armor_class = ArmorClass.new(self)
     @attack = Attack.new(self)
     @saving_throws = SavingThrows.new(self)
