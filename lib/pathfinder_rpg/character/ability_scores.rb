@@ -44,6 +44,12 @@ class PathfinderRpg::Character
       44..Float::INFINITY => 17,
     }
 
+    @constitution = 0
+    @dexterity = 0
+    @intelligence = 0
+    @strength = 0
+    @wisdom = 0
+
     attr_accessor :charisma, :constitution, :dexterity, :intelligence, :strength, :wisdom
 
     # @return [Fixnum] the charisma modifier.
