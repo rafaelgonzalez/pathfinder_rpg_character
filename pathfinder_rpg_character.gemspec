@@ -10,4 +10,6 @@ Gem::Specification.new do |s|
   s.license     = 'Open game license'
 
   s.add_runtime_dependency 'active_support', '>= 3.0'
+
+  s.add_development_dependency 'rspec'
 end
