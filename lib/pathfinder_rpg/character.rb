@@ -6,25 +6,29 @@ require 'pathfinder_rpg/character/races'
 require 'pathfinder_rpg/character/saving_throws'
 require 'pathfinder_rpg/character/skills'
 
-class PathfinderRpg::Character
-  include PathfinderRpg::Character::AbilityScores
+module PathfinderRpg
+  class Character
+    include PathfinderRpg::Character::AbilityScores
+    include PathfinderRpg::Character::Skills::Model
 
-  attr_reader :armor_class, :attack, :saving_throws
+    attr_reader :armor_class, :attack, :saving_throws
 
-  def initialize
-    extend PathfinderRpg::Character::Races
-    extend PathfinderRpg::Character::Klasses
-    extend PathfinderRpg::Character::Skills
+    def initialize
+      extend PathfinderRpg::Character::Races
+      extend PathfinderRpg::Character::Klasses
 
-    @charisma = 0
-    @constitution = 0
-    @dexterity = 0
-    @intelligence = 0
-    @strength = 0
-    @wisdom = 0
+      @charisma = 0
+      @constitution = 0
+      @dexterity = 0
+      @intelligence = 0
+      @strength = 0
+      @wisdom = 0
 
-    @armor_class = ArmorClass.new(self)
-    @attack = Attack.new(self)
-    @saving_throws = SavingThrows.new(self)
+      @armor_class = ArmorClass.new(self)
+      @attack = Attack.new(self)
+      @saving_throws = SavingThrows.new(self)
+
+      Skills.add_skills_to_character(self)
+    end
   end
 end

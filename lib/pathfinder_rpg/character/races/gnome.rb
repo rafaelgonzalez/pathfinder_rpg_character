@@ -1,22 +1,24 @@
-class PathfinderRpg::Character
-  module Race
-    module Gnome
-      extend PathfinderRpg::Character::Size::Small
+module PathfinderRpg
+  class Character
+    module Race
+      module Gnome
+        extend PathfinderRpg::Character::Size::Small
 
-      def race
-        PathfinderRpg::Character::Race::Gnome
-      end
+        def race
+          PathfinderRpg::Character::Race::Gnome
+        end
 
-      def charisma
-        super + 2
-      end
+        def charisma
+          super + 2
+        end
 
-      def constitution
-        super + 2
-      end
+        def constitution
+          super + 2
+        end
 
-      def strength
-        super - 2
+        def strength
+          super - 2
+        end
       end
     end
   end
