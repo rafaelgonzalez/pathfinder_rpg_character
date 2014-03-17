@@ -11,7 +11,7 @@ module PathfinderRpg
     include PathfinderRpg::Character::AbilityScores
     include PathfinderRpg::Character::Skills::Model
 
-    attr_reader :armor_class, :attack, :saving_throws
+    attr_reader :armor_class, :attack, :hit_points, :saving_throws
 
     def initialize
       extend PathfinderRpg::Character::Races
@@ -26,6 +26,7 @@ module PathfinderRpg
 
       @armor_class = ArmorClass.new(self)
       @attack = Attack.new(self)
+      @hit_points = PathfinderRpg::Character::HitPoints.new(self)
       @saving_throws = SavingThrows.new(self)
 
       Skills.add_skills_to_character(self)
