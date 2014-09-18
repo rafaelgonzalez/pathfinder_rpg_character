@@ -9,7 +9,12 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://rubygems.org/gems/pathfinder_rpg_character'
   s.license     = 'Open game license'
 
-  s.add_runtime_dependency 'active_support', '>= 3.0'
+  s.add_runtime_dependency 'activesupport', '>= 3.0'
 
   s.add_development_dependency 'rspec'
+  s.add_development_dependency 'pry'
+  s.add_development_dependency 'yard'
+  s.add_development_dependency 'coveralls'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'simplecov'
 end
