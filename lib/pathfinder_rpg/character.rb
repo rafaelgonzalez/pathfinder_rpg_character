@@ -9,13 +9,13 @@ require 'pathfinder_rpg/character/skills'
 module PathfinderRpg
   class Character
     include PathfinderRpg::Character::AbilityScores
+    include PathfinderRpg::Character::Klass::Include
     include PathfinderRpg::Character::Skills::Model
 
     attr_reader :armor_class, :attack, :saving_throws
 
     def initialize
       extend PathfinderRpg::Character::Races
-      extend PathfinderRpg::Character::Klasses
 
       @charisma = 0
       @constitution = 0
@@ -23,6 +23,8 @@ module PathfinderRpg
       @intelligence = 0
       @strength = 0
       @wisdom = 0
+
+      @klasses = []
 
       @armor_class = ArmorClass.new(self)
       @attack = Attack.new(self)
