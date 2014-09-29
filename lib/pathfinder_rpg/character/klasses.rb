@@ -7,9 +7,12 @@ module PathfinderRpg
 
       attr_reader :klasses
 
+      def self.init!
+        add_klasses_classes_to_namespace
+      end
+
       def self.extended(character)
         character.instance_exec do
-          add_klasses_classes_to_namespace
           @klasses = []
         end
       end
@@ -43,7 +46,7 @@ module PathfinderRpg
 
       private
 
-      def add_klasses_classes_to_namespace
+      def self.add_klasses_classes_to_namespace
         klasses_config = YAML.load_file(CLASSES_CONFIG_FILE)['classes']
 
         klasses_config.keys.each do |klass_name|
@@ -53,7 +56,7 @@ module PathfinderRpg
         end
       end
 
-      def create_klass_class(klass_name, klass_config)
+      def self.create_klass_class(klass_name, klass_config)
         klass = PathfinderRpg::Character::Klass.const_set(klass_name, Class.new(Klass::Base))
         klass.const_set('KLASS_CONFIG', klass_config)
         klass.send(:define_method, :configuration) { klass::KLASS_CONFIG }
