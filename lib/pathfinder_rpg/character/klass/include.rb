@@ -8,8 +8,8 @@ module PathfinderRpg
           klasses.map(&:level).sum || 0
         end
 
-        def attacks_per_turn
-          klasses.sort_by {|klass| klass.base_attack_bonus.size}.size
+        def attacks_per_round
+          klasses.map {|klass| klass.available_attacks}.max || 0
         end
 
         def add_klass(klass_name, level = 1, favored = false)

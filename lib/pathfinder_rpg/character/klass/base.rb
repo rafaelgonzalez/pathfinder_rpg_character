@@ -2,8 +2,8 @@ module PathfinderRpg
   class Character
     module Klass
       class Base
-        attr_accessor :level
-        attr_accessor :favored
+        attr_reader :character
+        attr_accessor :level, :favored
 
         def initialize(character, level = 1, favored = false)
           @character = character
