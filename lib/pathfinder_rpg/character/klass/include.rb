@@ -18,7 +18,7 @@ module PathfinderRpg
           verify_klass_name(klass_name)
           verify_klass_presence(klass_name)
 
-          @klasses.push full_class_name(klass_name).constantize.new(self, level, favored)
+          @klasses.push Klass.full_class_name(klass_name).constantize.new(self, level, favored)
         end
 
         private
@@ -32,13 +32,9 @@ module PathfinderRpg
         end
 
         def verify_klass_presence(klass_name)
-          if klasses.any? {|klass| klass.is_a?(full_class_name(klass_name).constantize) }
+          if klasses.any? {|klass| klass.is_a?(Klass.full_class_name(klass_name).constantize) }
             raise ArgumentError.new("This Character already has this klass.")
           end
-        end
-
-        def full_class_name(klass_name)
-          "PathfinderRpg::Character::Klass::#{klass_name}"
         end
       end
     end
