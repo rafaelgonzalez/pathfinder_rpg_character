@@ -16,15 +16,15 @@ module PathfinderRpg
         end
 
         def available_alignments
-          configuration['alignments']
+          self.class::KLASS_CONFIG['alignments']
         end
 
         def hit_die
-          configuration['hit_die']
+          self.class::KLASS_CONFIG['hit_die']
         end
 
         def skills_per_level
-          configuration['skill_ranks_per_level'] + @character.intelligence_modifier
+          self.class::KLASS_CONFIG['skill_ranks_per_level'] + @character.intelligence_modifier
         end
 
         def base_attack_bonus(attack_number = 1)
@@ -51,7 +51,7 @@ module PathfinderRpg
         private
 
         def level_configuration_for(key)
-          configuration['levels'][level][key]
+          self.class::KLASS_CONFIG['levels'][level][key]
         end
       end
     end

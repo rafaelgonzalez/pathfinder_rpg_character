@@ -35,7 +35,6 @@ module PathfinderRpg
       def self.create_klass_class(klass_name, klass_config)
         klass = PathfinderRpg::Character::Klass.const_set(klass_name, Class.new(Klass::Base))
         klass.const_set('KLASS_CONFIG', klass_config)
-        klass.send(:define_method, :configuration) { klass::KLASS_CONFIG }
       end
 
       def self.full_class_name(klass_name)
