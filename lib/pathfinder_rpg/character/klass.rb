@@ -38,7 +38,7 @@ module PathfinderRpg
         klass.send(:define_method, :configuration) { klass::KLASS_CONFIG }
       end
 
-      def full_class_name(klass_name)
+      def self.full_class_name(klass_name)
         "PathfinderRpg::Character::Klass::#{klass_name}"
       end
     end
