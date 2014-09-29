@@ -29,28 +29,28 @@ module PathfinderRpg
 
         def base_attack_bonus(attack_number = 1)
           raise ArgumentError.new('Not a valid attack number') unless attack_number > 0
-          level_configuration_for('base_attack_bonus').at(attack_number - 1) || 0
+          level_bonus_for('base_attack_bonus').at(attack_number - 1) || 0
         end
 
         def available_attacks
-          level_configuration_for('base_attack_bonus').size
+          level_bonus_for('base_attack_bonus').size
         end
 
         def fortitude_save_base
-          level_configuration_for('fortitude_save')
+          level_bonus_for('fortitude_save')
         end
 
         def reflex_save_base
-          level_configuration_for('reflex_save')
+          level_bonus_for('reflex_save')
         end
 
         def will_save_base
-          level_configuration_for('will_save')
+          level_bonus_for('will_save')
         end
 
         private
 
-        def level_configuration_for(key)
+        def level_bonus_for(key)
           self.class::KLASS_CONFIG['levels'][level][key]
         end
       end
