@@ -34,7 +34,11 @@ module PathfinderRpg
 
       def self.create_klass_class(klass_name, klass_config)
         klass = PathfinderRpg::Character::Klass.const_set(klass_name, Class.new(Klass::Base))
-        klass.const_set('KLASS_CONFIG', klass_config)
+        klass.const_set('LEVELS', klass_config['levels'])
+
+        klass.send(:define_singleton_method, :available_alignments) { klass_config['alignements'].to_a }
+        klass.send(:define_singleton_method, :hit_die) { klass_config['hit_die'] }
+        klass.send(:define_singleton_method, :skill_ranks_per_level) { klass_config['skill_ranks_per_level'] }
       end
 
       def self.full_class_name(klass_name)
