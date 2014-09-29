@@ -16,7 +16,7 @@ module PathfinderRpg
         end.delete_if {|klass_name| klass_name == :Base}
       end
 
-      def self.list_constants
+      def self.list
         list_names.map {|klass_name| full_class_name(klass_name).constantize }
       end
 
