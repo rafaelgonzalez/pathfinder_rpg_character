@@ -3,31 +3,62 @@ module PathfinderRpg
     module Skill
       class Base
         attr_accessor :rank
-        attr_reader :ability, :character, :trained_klasses, :label
+        attr_reader :character
 
         def initialize(character)
           @character = character
 
           @rank = 0
-          @ability = configuration['ability']
+        end
 
-          set_trained_klasses(configuration['classes'])
+        def self.ability
+          raise RuntimeError.new('Should be implemented by calling Skills.init!')
+        end
+
+        def ability
+          self.ability
+        end
+
+        def self.label
+          name.demodulize.downcase
         end
 
         def label
-          self.class.name.demodulize.downcase
+          self.class.label
+        end
+
+        def self.klass_skill?(klass)
+          trained_klasses.include? klass
+        end
+
+        def klass_skill?
+          character.klasses.any? do |klass|
+            self.class.klass_skill?(klass)
+          end
+        end
+
+        def self.trained_klasses
+          raise RuntimeError.new('Should be implemented by calling Skills.init!')
+        end
+
+        def trained_klasses
+          self.class.trained_klasses
+        end
+
+        def self.trained_only?
+          raise RuntimeError.new('Should be implemented by calling Skills.init!')
+        end
+
+        def trained_only?
+          self.class.trained_only?
         end
 
         def ability_modifier
           character.public_send("#{ability}_modifier")
         end
 
-        def klass_skill?
-          @character.klasses.any?{|klass| klasses.include? klass }
-        end
-
-        def skill_for_klass?(klass)
-
+        def usable?
+          !trained_only? or (rank > 0)
         end
 
         def klass_modifier
@@ -36,16 +67,6 @@ module PathfinderRpg
 
         def total
           ability_modifier + rank + klass_modifier
-        end
-
-        private
-
-        def set_trained_klasses(klasses_names)
-          @trained_klasses = []
-
-          klasses_names.each do |klass_name|
-            @trained_klasses.push "PathfinderRpg::Character::Klass::#{klass_name.camelize}".constantize
-          end
         end
       end
     end
