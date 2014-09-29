@@ -1,9 +1,9 @@
-require 'pathfinder_rpg/character/klasses/base'
-require 'pathfinder_rpg/character/klasses/include'
+require 'pathfinder_rpg/character/klass/base'
+require 'pathfinder_rpg/character/klass/include'
 
 module PathfinderRpg
   class Character
-    module Klasses
+    module Klass
       CLASSES_CONFIG_FILE = 'config/classes.yml'
 
       def self.init!

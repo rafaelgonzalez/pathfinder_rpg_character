@@ -8,5 +8,5 @@ require 'yaml'
 require 'pathfinder_rpg/character'
 require 'pathfinder_rpg/version'
 
-PathfinderRpg::Character::Klasses.init!
+PathfinderRpg::Character::Klass.init!
 PathfinderRpg::Character::Skills.init!

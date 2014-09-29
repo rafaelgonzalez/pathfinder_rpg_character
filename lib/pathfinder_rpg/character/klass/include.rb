@@ -24,7 +24,7 @@ module PathfinderRpg
         private
 
         def verify_klass_name(klass_name)
-          available_klasses = Klasses.list_names
+          available_klasses = Klass.list_names
 
           unless available_klasses.include? klass_name
             raise ArgumentError.new("Wrong klass name, choose one of the following: #{available_klasses}")
