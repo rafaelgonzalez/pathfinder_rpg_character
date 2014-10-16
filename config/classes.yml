@@ -37,9 +37,9 @@ classes:
       5:
         base_attack_bonus:
           - 5
-        fortitude_save: 5
-        reflex_save: 2
-        will_save: 2
+        fortitude_save: 4
+        reflex_save: 1
+        will_save: 1
       6:
         base_attack_bonus:
           - 6
@@ -644,9 +644,9 @@ classes:
       5:
         base_attack_bonus:
           - 5
-        fortitude_save: 5
-        reflex_save: 2
-        will_save: 2
+        fortitude_save: 4
+        reflex_save: 1
+        will_save: 1
       6:
         base_attack_bonus:
           - 6
@@ -872,6 +872,7 @@ classes:
         base_attack_bonus:
           - 11
           - 6
+          - 1
         fortitude_save: 9
         reflex_save: 9
         will_save: 9
