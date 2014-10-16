@@ -2,7 +2,9 @@ require 'codeclimate-test-reporter'
 CodeClimate::TestReporter.start
 
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter '/spec/'
+end
 
 require 'pathfinder_rpg'
 
