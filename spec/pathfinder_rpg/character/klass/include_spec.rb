@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe PathfinderRpg::Character::Klass::Include do
+RSpec.describe PathfinderRpg::Character::Klass::Include do
   subject { PathfinderRpg::Character.new }
 
   describe '#level' do

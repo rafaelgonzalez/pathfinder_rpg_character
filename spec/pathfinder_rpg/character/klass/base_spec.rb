@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe PathfinderRpg::Character::Klass::Base do
+RSpec.describe PathfinderRpg::Character::Klass::Base do
   let(:character) { PathfinderRpg::Character.new }
 
   subject { described_class.new(character) }

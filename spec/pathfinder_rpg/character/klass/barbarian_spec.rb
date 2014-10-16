@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe PathfinderRpg::Character::Klass::Barbarian do
+RSpec.describe PathfinderRpg::Character::Klass::Barbarian do
   it_behaves_like 'PathfinderRpg::Character::Klass::Base'
 
   let(:character) { PathfinderRpg::Character.new }

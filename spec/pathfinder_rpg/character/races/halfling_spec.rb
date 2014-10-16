@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe PathfinderRpg::Character::Race::Halfling do
+RSpec.describe PathfinderRpg::Character::Race::Halfling do
   subject { PathfinderRpg::Character.new }
   before { subject.set_race(:halfling) }
 

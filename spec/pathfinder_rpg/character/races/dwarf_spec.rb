@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe PathfinderRpg::Character::Race::Dwarf do
+RSpec.describe PathfinderRpg::Character::Race::Dwarf do
   subject { PathfinderRpg::Character.new }
   before { subject.set_race(:dwarf) }
 

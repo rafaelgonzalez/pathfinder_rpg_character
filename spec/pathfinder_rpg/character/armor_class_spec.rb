@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe PathfinderRpg::Character::ArmorClass do
+RSpec.describe PathfinderRpg::Character::ArmorClass do
   subject { PathfinderRpg::Character::ArmorClass.new(character) }
 
   let(:character) { PathfinderRpg::Character.new }
