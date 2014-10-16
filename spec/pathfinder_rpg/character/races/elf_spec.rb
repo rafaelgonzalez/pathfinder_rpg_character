@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe PathfinderRpg::Character::Race::Elf do
   subject { PathfinderRpg::Character.new }
   before { subject.set_race(:elf) }

@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe PathfinderRpg::Character::Klass do
   describe '.init!' do
     it 'adds classes to Klass namespace' do

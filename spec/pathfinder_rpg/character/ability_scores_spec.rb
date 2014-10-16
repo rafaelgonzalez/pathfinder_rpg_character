@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe PathfinderRpg::Character::AbilityScores do
   subject { PathfinderRpg::Character.new }
 

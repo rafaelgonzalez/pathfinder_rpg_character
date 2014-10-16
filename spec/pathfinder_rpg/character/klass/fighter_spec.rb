@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe PathfinderRpg::Character::Klass::Fighter do
   it_behaves_like 'PathfinderRpg::Character::Klass::Base'
 
