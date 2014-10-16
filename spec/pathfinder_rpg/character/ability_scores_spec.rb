@@ -1,4 +1,4 @@
-describe PathfinderRpg::Character::AbilityScores do
+RSpec.describe PathfinderRpg::Character::AbilityScores do
   subject { PathfinderRpg::Character.new }
 
   before do

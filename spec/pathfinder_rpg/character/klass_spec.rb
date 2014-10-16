@@ -1,4 +1,4 @@
-describe PathfinderRpg::Character::Klass do
+RSpec.describe PathfinderRpg::Character::Klass do
   describe '.init!' do
     it 'adds classes to Klass namespace' do
       expect(PathfinderRpg::Character::Klass.const_defined?('Barbarian')).to be true

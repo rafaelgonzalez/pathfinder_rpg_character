@@ -1,4 +1,4 @@
-describe PathfinderRpg::Character::Klass::Ranger do
+RSpec.describe PathfinderRpg::Character::Klass::Ranger do
   it_behaves_like 'PathfinderRpg::Character::Klass::Base'
 
   let(:character) { PathfinderRpg::Character.new }
